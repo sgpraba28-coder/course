@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to VTNF</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .main{
+            border: 2px solid #666;
+            width: 900px;
+            height: 80vh;
+            margin: auto;
+        }
+        header{
+            background: #3333cc;
+            color: white;
+            text-align: center;
+            padding: 22px 0;
+            font-weight: bold;
+            border-bottom: 2px solid#666;
+        }
+        header h1{
+            margin: 0;
+             font-size: 28px;
+        }
+        .content-box{
+            border: 2px solid #666;
+            margin: auto;
+            width: 750px;
+            max-height: 900px;
+        }
+        article{
+            padding: 15px 18px;
+            border-bottom: 2px solid #666;
+        }
+        article p{
+            font-style: italic;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+        }
+        .table h3, .content-box h3{
+            background: #777777;
+            text-align: center;
+            margin: 0;
+            font-weight: bold;
+            padding: 10px 0;
+            font-size: 16px;
+            border-bottom: 2px solid #666;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th{
+            background: #9e9e9e;
+            padding: 15px 5px;
+            border: 2px solid #666;
+            font-size: 14px;
+        }
+        table td{
+            padding: 18px 5px;
+            border: 2px solid #666;
+            text-align: center;
+            font-size: 14px;
+            background: white;
+        }
+        .name{
+            height: 30px;
+            width: 100%;
+        }
+        footer{
+            
+            background: #7da8e8;
+            text-align: center;
+            font-weight: bold;
+            height: 45px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            border-top: 2px solid #666;
+          
+        }
+        @media screen and (max-width: 768px){
+            .main{
+                 width: 100%;
+                 margin: 0; 
+                }
+            header h1{ 
+                font-size: 22px; 
+            }
+            .content-box {
+                width: auto;
+            }
+            article p{ 
+                font-size: 13px; 
+                line-height: 20px;
+             }
+            table th, table td{ 
+                padding: 8px 3px;
+                 font-size: 11px; 
+                }
+        }
+        @media screen and (max-width: 480px){
+            header h1{
+                 font-size: 18px;
+                }
+            .content-box {
+                width: auto;
+            }
+            article p{ 
+                font-size: 11px; 
+            }
+            footer{ 
+                font-size: 12px;
+             }
+        }
+       
+
+           
+            
+
+    </style>
+</head>
+<body>
+    <div class="main">
+  <header>
+    <h1> Welcome to VTNF</h1>
+  </header>
+
+  <div class="content-box">
+    <article>
+    <p>
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p>
+    </article>
+    
+    <table>
+        <h3> Student Mark List</h3>
+        <tr>
+            <th>S.NO</th>
+            <th>Name</th>
+            <th>Tamil</th>
+            <th>Englih</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>Social Science</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Jegan</td>
+            <td>90</td>
+            <td>78</td>
+            <td>35</td>
+            <td>80</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Nathiya</td>
+            <td>50</td>
+            <td>45</td>
+            <td>30</td>
+            <td>80</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Annapoorani</td>
+            <td>40</td>
+            <td>50</td>
+            <td>60</td>
+            <td>90</td>
+            <td>80</td>
+        </tr>
+    </table>
+    <div class="name"></div>
+    </div>
+    
+    <footer>copyright @ 2026 vtnf.com</footer>
+    </div>
+
+</body>
+</html>

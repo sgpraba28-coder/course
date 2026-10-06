@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        nav {
+            width: 100%;
+            height: 10vh;
+            background-color: rgba(51, 51, 51);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+
+        }
+
+        .logo {
+            /* background-color: aqua; */
+            width: 300px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: 400;
+            margin-left: 40px;
+            color: white;
+
+        }
+
+        .ul {
+
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 700px;
+            height: 100%;
+
+        }
+
+        .li {
+            /* background-color: blueviolet; */
+            margin-left: 20px;
+            list-style-type: none;
+            padding: 5px 15px;
+
+        }
+
+        .link {
+            text-decoration: none;
+            color: white;
+            /* background-color: rgb(255, 225, 127); */
+            font-size: 23px;
+            position: relative;
+        }
+
+        .link::before {
+            content: "";
+            background-color: whitesmoke;
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: -10px;
+            width: 0%;
+            transition: all 0.5S linear 0s;
+
+        }
+
+        .link:hover::before {
+            width: 100%;
+        }
+
+        span {
+            /* background-color: white; */
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        #img {
+            width: 40px;
+            height: 40px;
+        }
+
+        @media screen and (max-width:640px) {
+            nav {
+                position: relative;
+            }
+
+            .ul {
+                position: absolute;
+                top: 10vh;
+                width: 100%;
+                display: block;
+                height: auto;
+                background-color: grey;
+                left: -100%;
+                transition: all 0.5s linear 0s;
+            }
+
+            .li {
+                /* background-color: blue; */
+                /* border: 2px solid white; */
+                text-align: left;
+            }
+
+            span {
+                display: flex;
+                color: whitesmoke;
+                font-size: 32px;
+            }
+
+            .logo {
+                width: 150px;
+                /* background-color: aqua; */
+                margin-left: 30px;
+                justify-content: start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            GFG
+        </div>
+        <ul class="ul" id="ul">
+            <li class="li"><a href="" class="link">Home</a></li>
+            <li class="li"><a href="" class="link">About</a></li>
+            <li class="li"><a href="" class="link">Serivces</a></li>
+            <li class="li"><a href="" class="link">Contact</a></li>
+        </ul>
+
+        <span><i class="fa-solid fa-bars" onclick="toggle()"></i></span>
+
+    </nav>
+    <style>
+        .main{
+            background-color: aqua;
+            width:80%;
+            height:70vh;
+            margin:auto;
+            display: flex;
+            padding:20px;
+            /* border:1px solid black; */
+        }
+        article{
+            background-color: blue;
+            width:50%;
+            height:100%;
+            font-size:20px;
+            padding:30px;
+            border-right: 2px solid rgb(1, 1, 12);
+            text-shadow: 0px 0px 1px grey;
+        }
+        section{
+            width:50%;
+            height:100%;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #vijay{
+            width:300px;
+            height:350px;
+            box-shadow: 2px -2px 5px 2px navy;
+        }
+
+        @media screen and (max-width:1024px){
+            .main{
+                height:auto;
+                background-color: red;
+                display: block;
+
+            }
+            article{
+                width:100%;
+                
+            }
+            section{
+                width:100%;
+                margin-top: 20px;
+            }
+            
+        }
+        @media screen and (max-width:620px){
+            .main{
+                width:100%;
+            }
+        }
+    </style>
+
+    <main class = "main">
+        <article>
+            Chandrasekaran Joseph Vijay (born 22 June 1974) is an Indian politician and former actor who is currently serving as the ninth chief minister of Tamil Nadu since May 2026. He is the founder and president of the political party Tamilaga Vettri Kazhagam (TVK). Prior to entering politics, he was a leading actor in Tamil cinema and among the highest-paid actors in India, having won numerous accolades including multiple Tamil Nadu State Film Awards and South Indian International Movie Awards.
+
+            Following a stint as a child actor in the 1980s, Vijay made his debut as a leading man in Naalaiya Theerpu (1992), directed by his father S. A. Chandrasekhar. He rose to fame with romance films such as Poove Unakkaga (1996), Love Today (1997), Kadhalukku Mariyadhai (1997), Thullatha Manamum Thullum (1999), Kushi (2000), Priyamaanavale (2000), Friends (2001) before transitioning into an action star with Thirumalai (2003), Ghilli (2004), Madhurey (2004), Thirupaachi (2005) and Pokkiri (2007). From the 2010s onward, he starred in major commercial successes including Thuppakki (2012), Kaththi (2014), Theri (2016), Mersal (2017), Sarkar (2018), Bigil (2019), Master (2021), Leo (2023) and The Greatest of All Time (2024) which rank among the highest-grossing Tamil films.
+        </article>
+        <section>
+           <img src="./images/JosephVijay.jpg" alt="" id = "vijay">
+        </section>
+    </main>
+    <script>
+        let toggled = false;
+
+        function toggle() {
+            if (!toggled) {
+                toggled = true;
+                document.getElementById("ul").style.left = "0%";
+                return
+            }
+            if (toggled) {
+                toggled = false;
+                document.getElementById("ul").style.left = "-100%";
+                return
+            }
+        }
+    </script>
+</body>
+
+</html>

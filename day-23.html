@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px; 
+        box-sizing: border-box;
+    }
+    .main{
+        height: 300px;
+        width: 300px;
+        background-color: blue;
+        position: absolute;
+        animation: move 3s linear 0s 4 reverse;
+    }
+    @keyframes move{
+    0%
+    {left:0%;top: 0%;background-color: aqua;border-radius: 15%;}
+    25%
+    {left: 70%;top: 0%;background-color: brown;border-radius:20% ;}
+    50%
+    {left: 80%;top: 0%;background-color: blanchedalmond;border-radius:30;}
+    75%
+    {left: 90%;top: 0%;background-color: rgb(13, 27, 21);border-radius:40;}
+    100%
+    {left: 80%;top: 0%;background-color: rgb(255, 205, 233);border-radius:50;}
+    }
+    
+</style>
+<body>
+    <div class="main"></div>
+</body>
+</html>

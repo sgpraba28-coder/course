@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 10px;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      nav {
+        width: 100%;
+        height: 10vh;
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 10;
+      }
+
+      .edu-pro {
+        width: 250px;
+        height: 100%;
+        background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .edu-pro img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .edu-pro span {
+        font-size: 30px;
+        font-weight: 600;
+        margin-left: 15px;
+        font-family: sans-serif;
+      }
+
+      .ul {
+        background-color: red;
+        width: 600px;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .ul > li {
+        list-style-type: none;
+        padding: 15px 20px;
+      }
+
+      .link {
+        text-decoration: none;
+      }
+
+      .requestbtn {
+        width: 200px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .requestbtn > i {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 21px;
+      }
+
+      .requestbtn > button {
+        background-color: blue;
+        font-size: 20px;
+        padding: 10px;
+        border: none;
+        color: azure;
+        border-radius: 15px;
+      }
+
+      .menu-bar {
+        display: none;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .hero-section {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        background-color: #f1f7fd;
+        position: relative;
+        z-index: 1;
+      }
+
+      .con {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        gap: 20px;
+        width: 50%;
+        padding: 20px 40px;
+        margin: 10px 30px;
+      }
+
+      .sub-heading {
+        color: #006bff;
+        font-size: 15px;
+        letter-spacing: 1px;
+      }
+
+      .heading {
+        font-size: 47px;
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
+      .description {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+
+      button {
+        background-color: #006bff;
+        color: white;
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 1px solid #006bff;
+        margin-right: 10px;
+      }
+
+      .button2 {
+        background-color: white;
+        color: #006bff;
+      }
+
+      .con-img {
+        margin: auto;
+      }
+
+      .con-img > img {
+        width: 300px;
+      }
+
+      @media screen and (max-width: 731px) {
+        nav {
+          position: relative;
+          z-index: 10;
+        }
+
+        .ul {
+          position: absolute;
+          top: 70px;
+          left: 0px;
+          width: 100%;
+          height: 0px;
+          background-color: red;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          padding: 0px;
+
+          overflow: hidden;
+
+          transition: height 2s ease;
+
+          z-index: 10;
+        }
+
+        .ul > li {
+          padding: 15px;
+        }
+
+        .requestbtn {
+          display: none;
+        }
+
+        .menu-bar {
+          display: flex;
+          z-index: 20;
+        }
+
+        .hero-section {
+          flex-direction: column;
+          position: relative;
+          z-index: 1;
+        }
+
+        .con {
+          width: 100%;
+          margin: 10px;
+          padding: 20px;
+        }
+
+        .heading {
+          font-size: 35px;
+        }
+
+        .con-img {
+          width: 100%;
+          text-align: center;
+        }
+
+        .con-img > img {
+          width: 250px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="edu-pro">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzKoMwJAW8qg_mm7-k0gNwcWManSEtdmXa_W44_e5ctg&s=10"
+          alt=""
+        />
+
+        <span>EduPro</span>
+      </div>
+
+      <ul class="ul" id="ul">
+        <li>
+          <a href="" class="link">Home</a>
+        </li>
+
+        <li>
+          <a href="" class="link">About</a>
+        </li>
+
+        <li>
+          <a href="" class="link">Course</a>
+        </li>
+
+        <li>
+          <a href="" class="link">Blog</a>
+        </li>
+
+        <li>
+          <a href="" class="link">Contact</a>
+        </li>
+      </ul>
+
+      <div class="requestbtn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <button>get started</button>
+      </div>
+
+      <div class="menu-bar" onclick="toggle()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="con">
+        <h3 class="sub-heading">LEARN ANYTHING, ANYWHERE</h3>
+
+        <h1 class="heading">Build Your Future With Better Learning</h1>
+
+        <p class="description">
+          Join thousands of students and learn new skills with our expert
+          instructors.
+        </p>
+
+        <div class="btn-group">
+          <button>Explore Courses</button>
+
+          <button class="button button2">Watch Video</button>
+        </div>
+      </div>
+
+      <div class="con-img">
+        <img src="./girl.png" alt="girl" />
+      </div>
+    </section>
+
+    <script>
+      let toggled = false;
+
+      function toggle() {
+        if (!toggled) {
+          document.getElementById("ul").style.height = "350px";
+
+          toggled = true;
+
+          return;
+        }
+
+        if (toggled) {
+          document.getElementById("ul").style.height = "0px";
+
+          toggled = false;
+
+          return;
+        }
+      }
+    </script>
+  </body>
+</html>

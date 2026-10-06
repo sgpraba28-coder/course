@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: aqua;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 500px 600px;
+            gap: 15px;
+            /* column-gap: 18px; */
+            /* row-gap: 25px; */
+            align-items:;
+            /* align-content: center; */
+            align-content: space-evenly;
+
+            justify-content:start;
+            /* align-items:center;  */
+            grid-template-columns:repeat(4 , 200px ) auto;
+            grid-template-columns:1fr 1fr 1fr;
+            grid-template-columns:400px  400px  400px ;
+            grid-template-rows:500px 400px; */
+        }
+        .sub{
+            border: 2px solid black;
+            padding:10px;
+        }
+        .three{
+        padding: 100px 80px;
+        background-color: black;
+        color:whitesmoke;
+        }
+        .five{
+            padding: 80px 120px;
+            background-color: gold;
+            color: brown;
+        }
+       
+    </style>
+</head>
+     <div class="container">
+           <div class="sub one"> one</div>
+           <div class="sub two"> two</div>
+           <div class="sub three"> three</div>
+           <div class="sub four"> four</div>
+           <div class="sub five"> five</div>
+           <div class="sub six"> six</div>
+     </div>
+<body>
+     
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .main{
+        background-color: aqua;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+    .inner{
+        /* background-color: brown; */
+        width: 350px;
+        height: 440px;
+        border-radius: 6px;
+    }
+    .head{
+        background-color: blueviolet;
+        height: 35%;
+        width: 100%;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+    }
+    .mid{
+        background-color: whitesmoke;
+        height: 35%;
+        width: 100%;
+        position: relative;
+    }
+    .foot{
+        background-color: whitesmoke;
+        height: 30%;
+        width: 100%;
+        border-top: 0.5px solid grey;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius:6px ;
+
+    }
+    .image{
+       width: 120px;
+       height: 120px;
+       position: absolute;
+       left: 32%;
+       top: -26%;
+       border-radius: 60%;
+       border: 6px solid pink;
+    }
+    .para1{
+        position: absolute;
+        top: 100px;
+        left: 28%;
+        font-size: 26px;
+        letter-spacing: 3px;
+    }
+    .para2{
+        position: absolute;
+        top: 130px;
+        left: 50%;
+        font-size: 26px;
+        letter-spacing: 3px;
+        transform: translateX(-50%);
+    }
+
+
+</style>
+<body>
+    <div class="main">
+        <div class="inner">
+            <div class="sub head"></div>
+            <div class="sub mid">
+                <img src="./Assets/prabaxx.jpg" alt="" class="image">
+                <p class="para1">prabakaran</p><br>
+                <p class="para2">india</p>
+                </div>
+                <div class="sub foot"></div>
+            </div>
+    </div>
+</body>
+</html>

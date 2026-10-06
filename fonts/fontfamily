@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      nav {
+        width: 100%;
+        height: 10vh;
+        background-color: rgb(230, 17, 17);
+        display: flex;
+        justify-content: space-around;
+      }
+      .logo {
+        margin: 20px 30px 20px 30px;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        color: white;
+        font-weight: 800;
+        font-style: bold;
+        text-transform: uppercase;
+      }
+
+      .ul {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 700px;
+        height: 100%;
+      }
+      .li {
+        margin: 15px;
+        list-style-type: none;
+        color: white;
+        padding: 25px 30px;
+        text-decoration: none;
+      }
+
+      h1 {
+        
+        text-align: center;
+        padding: 50px;
+      }
+      h2{
+           display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+      }
+   
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">navbar</div>
+      <ul class="ul">
+        <li class="li"><a href="" class="link">Home</a></li>
+        <li class="li"><a href="" class="link">About</a></li>
+        <li class="li"><a href="" class="link">Serivces</a></li>
+        <li class="li"><a href="" class="link">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>NAVIGATION BAR</h1>
+    <h2>html& css</h2>
+  </body>
+</html>

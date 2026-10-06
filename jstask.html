@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Result Analyzer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(to right, purple, pink);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    .form-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    .form-box h1 {
+      color: #333;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #777;
+      margin-bottom: 25px;
+    }
+    .input-group {
+      margin-bottom: 18px;
+    }
+    .input-group label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: bold;
+      color: #333;
+    }
+    .input-group input,
+    .input-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus {
+      border-color: #667eea;
+    }
+    button {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 8px;
+      background: #667eea;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #5568d8;
+    }
+    .result-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .result-box h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #667eea;
+    }
+    .result-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .result-line span {
+      color: #89115b;
+    }
+
+    .result-line strong {
+      color: blueviolet;
+    }
+    .department-message {
+      margin-top: 25px;
+      padding: 18px;
+      background: #f3f4ff;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .department-message h3 {
+      color: palevioletred;
+      margin-bottom: 8px;
+    }
+
+    .department-message p {
+      color: lawngreen;
+    }
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .form-box,
+      .result-box {
+        padding: 20px;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h1>Student Result Analyzer</h1>
+        <p class="subtitle">Enter student details</p>
+
+        <form id="studentForm">
+          <div class="input-group">
+            <label>Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter name" />
+          </div>
+
+          <div class="input-group">
+            <label>Student ID</label>
+            <input type="text" id="studentId" placeholder="Example: STU101" />
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter email" />
+          </div>
+
+          <div class="input-group">
+            <label>Department</label>
+            <select id="department">
+              <option value="Java Full Stack">Java Full Stack</option>
+              <option value="Python Full Stack">Python Full Stack</option>
+              <option value="MERN Stack">MERN Stack</option>
+              <option value="Data Analytics">Data Analytics</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Mark</label>
+            <input type="number" id="mark" placeholder="Enter mark" />
+          </div>
+
+          <button type="submit">Analyze Result</button>
+        </form>
+      </div>
+
+      <!-- Result -->
+      <div id="result" class="result-box">
+        <h2>STUDENT RESULT</h2>
+
+        <div class="result-line">
+          <span>Name</span>
+          <strong id="resultName">prabakaran</strong>
+        </div>
+
+        <div class="result-line">
+          <span>Student ID</span>
+          <strong id="resultId">STU097</strong>
+        </div>
+
+        <div class="result-line">
+          <span>Email</span>
+          <strong id="resultEmail">praba28@gmail.com</strong>
+        </div>
+
+        <div class="result-line">
+          <span>Department</span>
+          <strong id="resultDepartment">Java Full Stack</strong>
+        </div>
+
+        <div class="result-line">
+          <span>Mark</span>
+          <strong id="resultMark">97</strong>
+        </div>
+
+        <div class="result-line">
+          <span>Grade</span>
+          <strong id="grade">A+</strong>
+        </div>
+
+        <div class="result-line">
+          <span>Result</span>
+          <strong id="resultStatus">PASS</strong>
+        </div>
+
+        <div class="result-line">
+          <span>Performance</span>
+          <strong id="performance">Excellent</strong>
+        </div>
+
+        <div class="result-line">
+          <span>Eligibility</span>
+          <strong id="eligibility"> Eligible for Next Level </strong>
+        </div>
+
+        <div class="department-message">
+          <h3>Department Recommendation</h3>
+          <p id="departmentMessage">Recommended: Advanced Java & Spring Boot</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

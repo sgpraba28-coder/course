@@ -1,0 +1,16 @@
+<h3>javascript</h3>
+    <div class="con" id="con">
+
+    </div>
+    <script>
+        const arr=["red","green","blue"]
+        tag=""
+        for(let i=0;i<arr.length;++i){
+            li=`<li style= "color:${arr[i]};"> ${arr[i]} </li>`;
+            tag+=li
+            alert(tag);
+        }
+        // document.getElementById(ul).innerHTML=tag;
+        document.getElementById("con").innerHTML="<ul>"+tag+"</ul>";
+
+    </script>
