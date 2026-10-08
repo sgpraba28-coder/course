@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>spider Rotation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    gap:50px;
+}
+
+.blades{
+    width:250px;
+    height:250px;
+    object-fit:contain;
+    transform-origin:center center;
+}
+
+.rotate{
+    animation:spin 1.0s linear infinite;
+}
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+button{
+    padding:10px 25px;
+    font-size:18px;
+    margin:0 10px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+
+    <img src="./Assets/fan.jpeg" class="blades" id="blade">
+
+<div>
+    <button onclick="fanOn()">rotate fast</button>
+    <button onclick="fanOff()">rotate slow</button>
+</div>
+
+<script>
+const blades = document.getElementById("spider");
+
+function fanOn(){
+    blades.classList.add("rotate");
+}
+
+function fanOff(){
+    blades.classList.remove("rotate");
+}
+</script>
+
+</body>
+</html>
