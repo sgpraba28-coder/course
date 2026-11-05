@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  let p1 = Promise.resolve(10);
+     let p2 = Promise.resolve(20);
+   let p3 = Promise.reject(error);
+
+ Promise.all([p1, p2, p3])
+ .then(function(result) {
+     console.log(result);
+  })
+  .catch(function(error) {
+     console.log(error);
+  });
+
+
+// let p1 = Promise.resolve(10);
+// let p2 = Promise.reject("Error");
+// let p3 = Promise.resolve(30);
+
+// Promise.allSettled([p1, p2, p3])
+// .then(function(result) {
+//     console.log(result);
+// });
+
+
+// let p1 = new Promise(function(resolve) {
+//     setTimeout(function() {
+//         resolve("Apple");
+//     }, 2000);
+// });
+
+// let p2 = new Promise(function(resolve) {
+//     setTimeout(function() {
+//         resolve("Orange");
+//     }, 1000);
+// });
+
+// Promise.race([p1, p2])
+// .then(function(result) {
+//     console.log(result);
+// });
+
+
+// let p1 = Promise.reject("Error 1");
+// let p2 = Promise.resolve("Apple");
+// let p3 = Promise.resolve("Orange");
+
+// Promise.any([p1, p2, p3])
+// .then(function(result) {
+//     console.log(result);
+// })
+// .catch(function(error) {
+//     console.log(error);
+// });
+
+</script>
+</body>
+</html>
