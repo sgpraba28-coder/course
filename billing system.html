@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing Statement</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #e8edf1;
+      font-family: Arial, sans-serif;
+      padding: 30px 15px;
+      color: #172d43;
+    }
+
+    .main-title {
+      text-align: center;
+      font-size: 42px;
+      font-weight: normal;
+      letter-spacing: 2px;
+      margin-bottom: 35px;
+    }
+
+    .invoice {
+      background: white;
+      border: 8px solid #092d5a;
+      max-width: 960px;
+      margin: auto;
+      padding: 25px;
+    }
+
+    .invoice-title {
+      background: greenyellow;
+      color: black;
+      text-align: center;
+      padding: 15px;
+      font-size: 30px;
+      margin-bottom: 25px;
+      border-bottom: 3px solid #b99a2e;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .company h3 {
+      margin-bottom: 7px;
+    }
+
+    .company p {
+      color: goldenrod;
+      line-height: 1.6;
+    }
+
+    .invoice-info {
+      text-align: right;
+      color: #222;
+    }
+
+    .invoice-info p {
+      margin-bottom: 8px;
+    }
+
+    .bill-to {
+      margin-bottom: 55px;
+    }
+
+    .bill-to h3 {
+      border-bottom: 2px solid blue;
+      width: 45%;
+      margin-bottom: 8px;
+    }
+
+    .bill-to p {
+      color: #222;
+      line-height: 1.6;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+      color: plum;
+    }
+
+    th {
+      background: chocolate;
+      color: white;
+      padding: 9px;
+      text-align: center;
+    }
+
+    td {
+      border: 1px solid #ddd;
+      padding: 6px;
+    }
+
+    td:first-child {
+      text-align: left;
+    }
+
+    td:not(:first-child) {
+      text-align: center;
+    }
+
+    .quantity,
+    .price {
+      width: 85px;
+      max-width: 100%;
+      border: none;
+      outline: none;
+      text-align: center;
+      font-size: 15px;
+      background: transparent;
+      color: #222;
+    }
+
+    .summary {
+      width: 280px;
+      max-width: 100%;
+      margin-left: auto;
+      color: white;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px;
+    }
+
+    .grand-total {
+      background: skyblue;
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      margin-top: 25px;
+      border-bottom: 2px solid #a98c22;
+    }
+
+    .thank-you {
+      text-align: center;
+      margin: 55px 0 35px;
+    }
+
+    .payment h3 {
+      border-bottom: 2px solid #e5d68b;
+      width: 45%;
+      margin-bottom: 10px;
+    }
+
+    .payment p {
+      color: gray;
+      font-style: italic;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .print-btn {
+      display: block;
+      margin: 25px auto 0;
+      padding: 12px 25px;
+      background: #092d68;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .print-btn:hover {
+      background: #ffbd08;
+      color: #222;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .main-title,
+      .print-btn {
+        display: none;
+      }
+
+      .invoice {
+        border: 5px solid #092d5a;
+        max-width: 100%;
+      }
+
+      .quantity,
+      .price {
+        appearance: none;
+        -webkit-appearance: none;
+      }
+    }
+  </style>
+  <body>
+    <h1 class="main-title">BILLING</h1>
+
+    <div class="invoice">
+      <h2 class="invoice-title">Billing Statement</h2>
+
+      <div class="details">
+        <div class="company">
+          <h3>Innovate Corp.</h3>
+          <p>123 Tech Avenue, Suite 100</p>
+          <p>Metropolis, ST 12345</p>
+          <p>contact@innovatecorp.com</p>
+        </div>
+
+        <div class="invoice-info">
+          <p><b>Statement#:</b> INV-2024-00123</p>
+          <p><b>Date:</b> 2026-10-31</p>
+          <p><b>Due Date:</b> 2026-11-4</p>
+        </div>
+      </div>
+
+      <div class="bill-to">
+        <h3>Bill To</h3>
+        <p>PRABAKARAN G</p>
+        <p>Global Solutions Ltd.</p>
+        <p>SENGURICHI</p>
+        <p>ULUNDURPET</p>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+
+        <tbody id="bill-items">
+          <tr>
+            <td>Cloud Server Hosting - Pro Tier</td>
+            <td><input type="number" class="quantity" value="1" min="0" /></td>
+            <td>
+              <input
+                type="number"
+                class="price"
+                value="150"
+                min="0"
+                step="0.01"
+              />
+            </td>
+            <td class="row-total">$150.00</td>
+          </tr>
+
+          <tr>
+            <td>Domain Name Renewal (.com)</td>
+            <td><input type="number" class="quantity" value="2" min="0" /></td>
+            <td>
+              <input
+                type="number"
+                class="price"
+                value="15.99"
+                min="0"
+                step="0.01"
+              />
+            </td>
+            <td class="row-total">$31.98</td>
+          </tr>
+
+          <tr>
+            <td>Managed Database Service</td>
+            <td><input type="number" class="quantity" value="1" min="0" /></td>
+            <td>
+              <input
+                type="number"
+                class="price"
+                value="75"
+                min="0"
+                step="0.01"
+              />
+            </td>
+            <td class="row-total">$75.00</td>
+          </tr>
+
+          <tr>
+            <td>SSL Certificate</td>
+            <td><input type="number" class="quantity" value="1" min="0" /></td>
+            <td>
+              <input
+                type="number"
+                class="price"
+                value="49.95"
+                min="0"
+                step="0.01"
+              />
+            </td>
+            <td class="row-total">$49.95</td>
+          </tr>
+
+          <tr>
+            <td>Consulting Hours</td>
+            <td><input type="number" class="quantity" value="5" min="0" /></td>
+            <td>
+              <input
+                type="number"
+                class="price"
+                value="120"
+                min="0"
+                step="0.01"
+              />
+            </td>
+            <td class="row-total">$600.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="summary">
+        <div class="summary-row">
+          <b>Subtotal</b>
+          <span id="subtotal">$906.93</span>
+        </div>
+
+        <div class="summary-row">
+          <b>Tax (8%)</b>
+          <span id="tax">$72.55</span>
+        </div>
+
+        <div class="grand-total">
+          <b>Total Amount Due</b>
+          <b id="grand-total">$979.48</b>
+        </div>
+      </div>
+
+      <h3 class="thank-you">Thank you for your business!</h3>
+
+      <div class="payment">
+        <h3>Payment Instructions:</h3>
+        <p>
+          Please make payments to Innovate Corp. via Wire Transfer or Online
+          Portal.
+        </p>
+        <p>Late payments are subject to a 1.5% monthly interest charge.</p>
+      </div>
+
+      <button class="print-btn" onclick="window.print()">Print Invoice</button>
+    </div>
+    <script>
+      function calculateBill() {
+        let rows = document.querySelectorAll("#bill-items tr");
+
+        let subtotal = 0;
+
+        rows.forEach(function (row) {
+          let quantity = Number(row.querySelector(".quantity").value);
+
+          let price = Number(row.querySelector(".price").value);
+
+          let total = quantity * price;
+
+          row.querySelector(".row-total").textContent = "$" + total.toFixed(2);
+
+          subtotal += total;
+        });
+
+        let tax = subtotal * 0.08;
+
+        let grandTotal = subtotal + tax;
+
+        document.getElementById("subtotal").textContent =
+          "$" + subtotal.toFixed(2);
+
+        document.getElementById("tax").textContent = "$" + tax.toFixed(2);
+
+        document.getElementById("grand-total").textContent =
+          "$" + grandTotal.toFixed(2);
+      }
+
+
+      document.querySelectorAll(".quantity, .price").forEach(function (input) {
+        input.addEventListener("input", calculateBill);
+      });
+
+
+      calculateBill();
+    </script>
+  </body>
+</html>
