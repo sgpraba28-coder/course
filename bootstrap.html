@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 5.3.8 Cards Example</title>
+    <!-- Bootstrap 5.3.8 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body class="bg-warning">
+
+    <div class="container py-5">
+      <h2 class="text-right fw-bold mb-4">Bootstrap 5.3.8 Card Designs</h2>
+
+      <!-- 1. Responsive 3-Column Card Grid -->
+      <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+        
+        <!-- Card 1: Basic Image Card -->
+        <div class="container-fluid g-xl-0">
+          <div class="card h-100 shadow-sm">
+            <img src="./Assets/Prabhakaran_2_by_Rajasekharan_2019.jpg" class="card-img-top" alt="Card Image">
+            <div class="card-body">
+              <span class="badge text-bg-info mb-2">New</span>
+              <h5 class="card-title">Standard Card</h5>
+              <p class="card-text text-muted">
+                This is a standard card with an image on top, a badge, title, and action button.
+              </p>
+            </div>
+            <div class="card-footer bg-white border-top-0">
+              <a href="#" class="btn btn-primary w-100">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Card with List Group -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header fw-semibold bg-primary text-bg-light">
+              Featured Service Plan
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">₹999 <small class="text-muted fs-6">/ month</small></h3>
+              <p class="card-text">Best for small businesses and daily maintenance support.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">✔ 24/7 Customer Support</li>
+              <li class="list-group-item">✔ Free Inspection</li>
+              <li class="list-group-item">✔ Priority Service</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="btn btn-outline-primary w-100">Choose Plan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Colored / Dark Card -->
+        <div class="col">
+          <div class="card text-bg-dark h-100 shadow-sm">
+            <img src="./Assets/senthil.jpeg" class="card-img-top opacity-75" alt="Dark Card">
+            <div class="card-body">
+              <h5 class="card-title">Dark Theme Card</h5>
+              <p class="card-text">
+                Use <code>text-bg-dark</code> or <code>text-bg-success</code> utility classes to quickly create colored cards.
+              </p>
+            </div>
+            <div class="card-footer border-secondary d-flex justify-content-between align-items-center">
+              <small class="text-light">Updated 5 mins ago</small>
+              <a href="#" class="btn btn-light btn-sm">Explore</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 2. Horizontal Card -->
+      <h4 class="fw-bold mb-3">Horizontal Card</h4>
+      <div class="card mb-3 shadow-sm" style="max-width: 720px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://picsum.photos/300/250?random=3" class="img-fluid rounded-start h-100 object-fit-cover" alt="Horizontal Image">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Horizontal Layout Card</h5>
+              <p class="card-text">
+                Combine Bootstrap's grid system (<code>.row</code> and <code>.col-md-*</code>) inside a card to place the image on the left and content on the right.
+              </p>
+              <p class="card-text"><small class="text-body-secondary">Last updated today</small></p>
+              <button class="btn btn-success btn-sm">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bootstrap 5.3.8 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

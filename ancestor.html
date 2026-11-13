@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Methods</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <h2>jQuery Add Remove Traversing</h2>
+
+    <div id="box">
+        <p>Apple</p>
+        <p id="demo">Orange</p>
+        <p>Mango</p>
+        <p>banana</p>
+    </div>
+
+    <script>
+
+        // Add
+
+        // $("#box").append("<p>Banana</p>");
+        // $("#box").prepend("<p>Grapes</p>");
+        // $("#demo").after("<p>Watermelon</p>");
+        // $("#demo").before("<p>Cherry</p>");
+
+
+        // Remove
+
+        // $("#demo").remove();
+
+
+        // Ancestors
+
+        // $("#demo").parent().css("background", "yellow");
+
+        // $("#demo").parents().css("background", "red");
+
+        // $("#demo").parentsUntil("body").css("background","blue");
+
+        // $("#demo").closest("div").css("background", "lightblue");
+
+
+        // // Descendants
+
+        // $("#box").children().css("color", "blue");
+
+        // $("#box").find("p").css("font-size", "40px");
+
+
+        // // Siblings
+
+        // $("#demo").siblings().css("color", "green");
+
+        // $("#demo").next().css("background", "pink");
+
+        // $("#demo").nextAll().css("border-bottom", "2px solid blue");
+
+        // $("#demo").prev().css("background", "orange");
+
+        // $("#demo").prevAll().css("font-weight", "bold");
+
+
+        // // Filtering
+
+        // $("#box p").first().css("background", "yellow");
+
+        // $("#box p").last().css("background", "pink");
+
+        // $("#box p").eq(0).css("border", "2px solid red");
+
+        // $("#box p").filter("#demo").css("font-style", "italic");
+
+        $("#box p").not("#demo").css("text-decoration", "underline");
+
+    </script>
+
+</body>
+</html>

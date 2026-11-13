@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #box{
+            background-color: red;
+            color:yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head", title="welcome">JQuery</h1>
+    <!-- <script>
+        $(document).ready(function(){
+            $("h1").mouseenter(function(){
+                $("h1").css("color","blue")    
+            })
+            $("h1").mouseleave(function(){
+                $("h1").css("color","")    
+            })
+            $("h1").click(function(){
+                $("h1").attr("class","addd")    
+            })
+        })
+    </script> -->
+    <!-- <div id="box">
+    <h3>Apple</h3>
+</div> -->
+
+<!-- <div id="box">
+    <h3>Apple</h3>
+    <h3>Mango</h3>
+    <h3>Orange</h3>
+</div> -->
+
+<button id="btn">Empty</button>
+<script>
+   // Adds new content inside the element, at the end-->
+    // $("#box").append("<h3>Orange</h3>");
+    //  Adds new content inside the element, at the begining-->
+    // $("#box").prepend("<h3>Orange</h3>");
+    //Removes the selected element completely.
+    // $("#box").remove();
+    
+
+    // $(document).ready(function() {
+
+    //     $("#btn").click(function() {
+    //         $("#box").empty();
+    //     });
+
+    // });
+    //Adds a class if it is not present. Removes it if it is already present.
+//      $(document).ready(function() {
+//     $("#btn").click(function() {
+//     $("#head").toggleClass("demo");
+// })
+//      });
+$(document).ready(function() {
+//     $("#btn").click(function() {
+//     $("#head").css("color","blue");
+// })
+// Adds a title attribute to the h1 element.
+$("#btn").click(function() {
+    $("#head").attr("title","welcome");
+});
+// Remove the attr
+$("#btn").click(function() {
+    $("#head").removeAttr("title");
+     });
+    })
+</script>
+
+</body>
+</html>
